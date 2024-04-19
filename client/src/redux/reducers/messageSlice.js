@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getAllConversations } from "../actions/conversationActions";
-
+import { sendMessage } from "../actions/messageActions";
 
 const initialState = {
     messages: [],
@@ -14,8 +13,15 @@ const conversationSlice = createSlice({
     reducers:{
     },
     extraReducers: builder => {
-        builder.addCase(getAllConversations.pending, (state, action) => {
+        builder.addCase(sendMessage.pending, (state, action) => {
             state.loading = true;
+        });
+        builder.addCase(sendMessage.fulfilled, (state, action) => {
+            state.loading = false;
+            state.loading = false;
+        });
+        builder.addCase(sendMessage.rejected, (state, action) => {
+            state.loading = false;
         });
     }
 })

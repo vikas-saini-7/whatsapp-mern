@@ -26,3 +26,15 @@ export const addConversation = createAsyncThunk(
             return error.message;
         }
 })
+
+export const getConversation = createAsyncThunk(
+    'auth/getConversationId',
+    async (Ids) => {
+        try {
+            const response = await axios.post(`${BASE_URL}/api/conversation/get`, Ids);
+            return response.data;
+        } catch (error) {
+            console.log("Error in getConversation", error.message)
+            return error.message;
+        }
+})

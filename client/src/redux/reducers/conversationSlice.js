@@ -1,10 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getAllConversations } from "../actions/conversationActions";
+import { getAllConversations, getConversation } from "../actions/conversationActions";
 
 
 const initialState = {
     users: [],
     activeConversation: {},
+    conversationData: {},
     searchedConversations: [],
     loading: false,
     error: null
@@ -33,6 +34,18 @@ const conversationSlice = createSlice({
             state.searchedConversations = action.payload;
         });
         builder.addCase(getAllConversations.rejected, (state, action) => {
+            state.loading = false;
+            state.error = action.payload;
+        });
+
+        builder.addCase(getConversation.pending, (state, action) => {
+            state.loading = true;
+        });
+        builder.addCase(getConversation.fulfilled, (state, action) => {
+            state.loading = false;
+            state.conversationData = action.payload;
+        });
+        builder.addCase(getConversation.rejected, (state, action) => {
             state.loading = false;
             state.error = action.payload;
         });

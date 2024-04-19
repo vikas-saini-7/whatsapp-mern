@@ -32,6 +32,7 @@ const ListSection = () => {
       {/* input container  */}
       <SearchConversations/>
 
+      {/* Persons  */}
       <ContactsChatList/>
 
       {/* <div className="absolute hidden right-6 top-12 rounded bg-gray-400 shadow-2xl transition duration-1000 ease-out" id="menuItems">

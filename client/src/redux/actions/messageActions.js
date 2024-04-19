@@ -3,14 +3,14 @@ import axios from 'axios'
 
 const BASE_URL = "http://localhost:8000"
 
-export const getAllConversations = createAsyncThunk(
-    'auth/getAllConversations',
-    async () => {
+export const sendMessage = createAsyncThunk(
+    'auth/sendMessage',
+    async (message) => {
         try {
-            const response = await axios.get(`${BASE_URL}/api/user/all`);
+            const response = await axios.get(`${BASE_URL}/api/message/send`, message);
             return response.data;
         } catch (error) {
-            console.log("Error in getAllConversations", error.message)
+            console.log("Error in sendMessage", error.message)
             return error.message;
         }
 })
