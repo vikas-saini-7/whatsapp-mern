@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+
+  font-family: "Roboto", sans-serif;
+}
+// variables 
+$primary: #046163;
+$gray: #2a2f32;
+$dark-bg: #101826;
+$dark-bg-2: #121d21;
+$input-box-bg: #1e2428;
+$input-bg: #32393b;
+
+
+
+body{
+    // background-color: $dark-bg;
+}
+
+
+// color classes
+.bg-primary{
+  background-color: $primary;
+}
+.bg-gray{
+  background-color: $gray;
+}
+.bg-dark{
+  background-color: $dark-bg;
+}
+.bg-dark-2{
+  background-color: $dark-bg-2;
+}
+.bg-input-box{
+  background-color: $input-box-bg;
+}
+.bg-input{
+  background-color: $input-bg;
+}
+
+
+// SCROLL BAR CHANGE for chat container
+
+#contact-list::-webkit-scrollbar{
+  width: .3rem;
+}
+#contact-list::-webkit-scrollbar-track{
+  background: rgba(0, 0, 0, .2);
+
+}
+#contact-list::-webkit-scrollbar-thumb{
+  background: rgba(255, 255, 255, .16);
+}  
+
+#chats-container::-webkit-scrollbar{
+  width: .4rem;
+}
+#chats-container::-webkit-scrollbar-track{
+  background: transparent;
+}
+#chats-container::-webkit-scrollbar-thumb{
+  background: rgba(255, 255, 255, .2);
+} 
+#contact-list-item:hover .arrow {
+  display: block;
+}
