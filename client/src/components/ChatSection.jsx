@@ -11,7 +11,7 @@ const ChatSection = () => {
 
   useEffect(() => {
     dispatch(getMessages(conversationData._id));
-  }, [])
+  }, [conversationData])
 
   return (
     <div className="relative hidden md:flex bg-dark flex-auto flex-col">
