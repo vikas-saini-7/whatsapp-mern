@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { getConversation } from '../redux/actions/conversationActions';
+import { sendMessage } from '../redux/actions/messageActions';
 
 const MessageBox = () => {
     const user = useSelector(state => state.auth.user)
     const person = useSelector(state => state.conversation.activeConversation)
+    const conversation = useSelector(state => state.conversation.conversationData)
     const dispatch = useDispatch()
 
     const [messageText, setMessageText] = useState();
@@ -15,8 +17,13 @@ const MessageBox = () => {
 
     const handleSendMessage = (e) => {
         if(e.key === "Enter"){
-            console.log(messageText)
-            
+            dispatch(sendMessage({
+              senderId: user.sub,
+              receiverId: person.sub,
+              conversationId: conversation._id,
+              type: "text",
+              text: messageText
+            }))
             setMessageText("")
         }
     }

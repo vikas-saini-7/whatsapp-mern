@@ -7,7 +7,7 @@ const initialState = {
     error: null
 }
 
-const conversationSlice = createSlice({
+const messageSlice = createSlice({
     name: 'auth',
     initialState:initialState,
     reducers:{
@@ -25,6 +25,4 @@ const conversationSlice = createSlice({
         });
     }
 })
-export const {setActiveConversation, searchConversation} = conversationSlice.actions;
-
-export default conversationSlice.reducer;
+export default messageSlice.reducer;

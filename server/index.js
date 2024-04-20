@@ -6,6 +6,7 @@ import cors from 'cors'
 import connectDB from "./config/db.js";
 import userRoutes from "./routes/userRoutes.js";
 import conversationRoutes from "./routes/conversationRoutes.js";
+import messageRoutes from "./routes/messageRoutes.js";
 
 dotenv.config();
 
@@ -18,6 +19,7 @@ app.use(bodyParser.json());
 // Routes 
 app.use('/api/user', userRoutes);
 app.use('/api/conversation', conversationRoutes)
+app.use('/api/message', messageRoutes)
 
 const PORT = process.env.PORT || 8000;
 
