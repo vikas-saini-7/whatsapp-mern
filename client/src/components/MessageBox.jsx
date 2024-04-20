@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { getConversation } from '../redux/actions/conversationActions';
-import { sendMessage } from '../redux/actions/messageActions';
+import { getMessages, sendMessage } from '../redux/actions/messageActions';
 
 const MessageBox = () => {
     const user = useSelector(state => state.auth.user)
