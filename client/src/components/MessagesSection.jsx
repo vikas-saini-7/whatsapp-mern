@@ -1,12 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import LeftMessage from './LeftMessage'
 import RightMessage from './RightMessage'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { getMessages } from '../redux/actions/messageActions'
 
-const MessagesSection = () => {
+const MessagesSection = ({flag}) => {
   const messages = useSelector(state => state.message.messages);
   const loading = useSelector(state => state.message.loading);
   const user = useSelector(state => state.auth.user)
+  const conversationData = useSelector(state => state.conversation.conversationData)
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    conversationData?._id && dispatch(getMessages(conversationData?._id));
+  }, [conversationData, flag])
+
   return (
     <>
     <div className="flex overflow-y-auto h-5/6 bg-dark mb-1" id="chats-container">

@@ -10,98 +10,112 @@ const ContactsChatList = () => {
         {persons &&
         <>
           {persons.map((item) => (
-            item.sub !== user.sub ? <ChatListItem key={item._id} person={item}/> : ''
+            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
           ))}
         </>
         }
         {persons &&
         <>
           {persons.map((item) => (
-            item.sub !== user.sub ? <ChatListItem key={item._id} person={item}/> : ''
+            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
           ))}
         </>
         }
         {persons &&
         <>
           {persons.map((item) => (
-            item.sub !== user.sub ? <ChatListItem key={item._id} person={item}/> : ''
+            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
           ))}
         </>
         }
         {persons &&
         <>
           {persons.map((item) => (
-            item.sub !== user.sub ? <ChatListItem key={item._id} person={item}/> : ''
+            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
           ))}
         </>
         }
         {persons &&
         <>
           {persons.map((item) => (
-            item.sub !== user.sub ? <ChatListItem key={item._id} person={item}/> : ''
+            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
           ))}
         </>
         }
         {persons &&
         <>
           {persons.map((item) => (
-            item.sub !== user.sub ? <ChatListItem key={item._id} person={item}/> : ''
+            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
           ))}
         </>
         }
         {persons &&
         <>
           {persons.map((item) => (
-            item.sub !== user.sub ? <ChatListItem key={item._id} person={item}/> : ''
+            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
           ))}
         </>
         }
         {persons &&
         <>
           {persons.map((item) => (
-            item.sub !== user.sub ? <ChatListItem key={item._id} person={item}/> : ''
+            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
           ))}
         </>
         }
         {persons &&
         <>
           {persons.map((item) => (
-            item.sub !== user.sub ? <ChatListItem key={item._id} person={item}/> : ''
+            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
           ))}
         </>
         }
         {persons &&
         <>
           {persons.map((item) => (
-            item.sub !== user.sub ? <ChatListItem key={item._id} person={item}/> : ''
+            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
           ))}
         </>
         }
         {persons &&
         <>
           {persons.map((item) => (
-            item.sub !== user.sub ? <ChatListItem key={item._id} person={item}/> : ''
+            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
           ))}
         </>
         }
         {persons &&
         <>
           {persons.map((item) => (
-            item.sub !== user.sub ? <ChatListItem key={item._id} person={item}/> : ''
+            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
           ))}
         </>
         }
         {persons &&
         <>
           {persons.map((item) => (
-            item.sub !== user.sub ? <ChatListItem key={item._id} person={item}/> : ''
+            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
           ))}
         </>
         }
         {persons &&
         <>
           {persons.map((item) => (
-            item.sub !== user.sub ? <ChatListItem key={item._id} person={item}/> : ''
+            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
+          ))}
+        </>
+        }
+        {persons &&
+        <>
+          {persons.map((item) => (
+            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
+          ))}
+        </>
+        }
+        {persons &&
+        <>
+          {persons.map((item) => (
+            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
           ))}
         </>
         }

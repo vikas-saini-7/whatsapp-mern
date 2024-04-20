@@ -10,8 +10,8 @@ const ChatListItem = ({person}) => {
   const {name, picture} = person;
 
   const handleClick = () => {
-    dispatch(setActiveConversation(person))
-    dispatch(addConversation({senderId: user.sub, receiverId: person.sub}))
+    person && dispatch(setActiveConversation(person))
+    person && user && dispatch(addConversation({senderId: user.sub, receiverId: person.sub}))
   }
   return (
     <>
