@@ -14,3 +14,16 @@ export const sendMessage = createAsyncThunk(
             return error.message;
         }
 })
+
+
+export const getMessages = createAsyncThunk(
+    'auth/getMessages',
+    async (id) => {
+        try {
+            const response = await axios.get(`${BASE_URL}/api/message/get/${id}`);
+            return response.data;
+        } catch (error) {
+            console.log("Error in getMessages", error.message)
+            return error.message;
+        }
+})

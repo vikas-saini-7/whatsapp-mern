@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import MessagesSection from './MessagesSection'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import MessageBox from './MessageBox'
+import { getMessages } from '../redux/actions/messageActions'
 
 const ChatSection = () => {
   const {name, picture} = useSelector(state => state.conversation.activeConversation)
+  const conversationData = useSelector(state => state.conversation.conversationData)
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getMessages(conversationData._id));
+  }, [])
+
   return (
     <div className="relative hidden md:flex bg-dark flex-auto flex-col">
 
