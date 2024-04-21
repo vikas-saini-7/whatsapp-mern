@@ -11,7 +11,7 @@ const ChatListItem = ({person}) => {
 
   const handleClick = () => {
     person && dispatch(setActiveConversation(person))
-    person && user && dispatch(addConversation({senderId: user.sub, receiverId: person.sub}))
+    // dispatch(addConversation({senderId: user.sub, receiverId: person.sub}))
   }
   return (
     <>

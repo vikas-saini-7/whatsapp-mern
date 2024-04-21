@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 
 const ContactsChatList = () => {
   const user = useSelector(state=> state.auth.user)
-  const persons = useSelector(state => state.conversation.searchedConversations)
+  const persons = useSelector(state => state.conversation.users)
   return (
     <div  className="flex flex-col bg-dark-2 overflow-y-auto overflow-x-hidden" id="contact-list">
         {persons &&

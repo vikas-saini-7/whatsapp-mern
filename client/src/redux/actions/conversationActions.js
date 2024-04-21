@@ -15,20 +15,20 @@ export const getAllConversations = createAsyncThunk(
         }
 })
 
-export const addConversation = createAsyncThunk(
-    'auth/addConversation',
-    async (Ids) => {
-        try {
-            const response = await axios.post(`${BASE_URL}/api/conversation/add`, Ids);
-            return response.data;
-        } catch (error) {
-            console.log("Error in getAllConversations", error.message)
-            return error.message;
-        }
-})
+// export const addConversation = createAsyncThunk(
+//     'auth/addConversation',
+//     async (Ids) => {
+//         try {
+//             const response = await axios.post(`${BASE_URL}/api/conversation/add`, Ids);
+//             return response.data;
+//         } catch (error) {
+//             console.log("Error in getAllConversations", error.message)
+//             return error.message;
+//         }
+// })
 
 export const getConversation = createAsyncThunk(
-    'auth/getConversationId',
+    'auth/getConversation',
     async (Ids) => {
         try {
             const response = await axios.post(`${BASE_URL}/api/conversation/get`, Ids);

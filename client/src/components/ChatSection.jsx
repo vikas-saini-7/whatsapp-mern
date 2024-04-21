@@ -3,12 +3,11 @@ import MessagesSection from './MessagesSection'
 import { useDispatch, useSelector } from 'react-redux'
 import MessageBox from './MessageBox'
 import { getMessages } from '../redux/actions/messageActions'
-import { getConversation } from '../redux/actions/conversationActions'
 
 const ChatSection = () => {
   const user = useSelector(state => state.auth.user)
-  const person = useSelector(state => state.conversation.activeConversation)
   const {name, picture} = useSelector(state => state.conversation.activeConversation)
+  const conversationData = useSelector(state => state.conversation.conversationData)
   const dispatch = useDispatch();
 
   const [flag, setFlag] = useState() 
@@ -18,8 +17,8 @@ const ChatSection = () => {
   }
 
   useEffect(() => {
-    person && dispatch(getConversation({senderId: user.sub, receiverId: person.sub}))
-  }, [user, person]);
+    dispatch(getMessages(conversationData?._id));
+  }, [conversationData, flag])
 
   return (
     <div className="relative hidden md:flex bg-dark flex-auto flex-col">
