@@ -1,7 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { setActiveConversation } from '../redux/reducers/conversationSlice';
-import { addConversation } from '../redux/actions/conversationActions';
 
 const ChatListItem = ({person}) => {
   const user = useSelector(state => state.auth.user)
