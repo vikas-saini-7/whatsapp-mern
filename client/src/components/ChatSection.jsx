@@ -10,7 +10,7 @@ const ChatSection = () => {
   const conversationData = useSelector(state => state.conversation.conversationData)
   const dispatch = useDispatch();
 
-  const [flag, setFlag] = useState() 
+  const [flag, setFlag] = useState()
 
   function toggleFlag(){
     setFlag(!flag);

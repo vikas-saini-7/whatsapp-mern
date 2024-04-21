@@ -29,14 +29,14 @@ export const getMessages = createAsyncThunk(
 })
 
 export const uploadFile = createAsyncThunk(
-    'auth/uploadFile',
-    async (id) => {
+    'message/uploadFile',
+    async (data) => {
         try {
-            const response = await axios.get(`${BASE_URL}/api/message/get/${id}`);
+            const response = await axios.post(`${BASE_URL}/api/file/upload`, data);
             console.log(response.data)
             return response.data;
         } catch (error) {
-            console.log("Error in getMessages", error.message)
+            console.log("Error in uploadFile", error.message)
             return error.message;
         }
 })
