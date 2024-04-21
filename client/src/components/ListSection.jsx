@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import ContactsChatList from './ContactsChatList'
 import { getAllConversations } from '../redux/actions/conversationActions'
 import { useDispatch, useSelector } from 'react-redux'
-import { searchConversation } from '../redux/reducers/conversationSlice'
 import SearchConversations from './SearchConversations'
 
 const ListSection = () => {

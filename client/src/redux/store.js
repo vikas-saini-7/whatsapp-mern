@@ -9,7 +9,7 @@ const store = configureStore({
         auth: authReducer,
         conversation: conversationReducer,
         message: messageReducer
-    }
+    },
 })
 
 export default store;
