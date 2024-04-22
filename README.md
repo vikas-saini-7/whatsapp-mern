@@ -1,18 +1,18 @@
 # WhatsApp MERN Clone
 
-This project is a full-stack clone of WhatsApp, built using the MERN stack (MongoDB, Express.js, React.js, Node.js) and socket.io for real-time communication.
+This project is a full-stack clone of WhatsApp web, built using the MERN stack (MongoDB, Express.js, React.js, Node.js) and socket.io for real-time communication.
 
 ## Features
 
 - Real-time messaging
-- User authentication
+- User authentication with Google OAuth
 - Online/offline status indicators
 - Contact list with search functionality
-- Responsive design
+- Pixel Perfect Responsive design
 
 ## Technologies Used
 
-- **Frontend**: React.js, Material-UI
+- **Frontend**: React.js, Tailwind CSS, SCSS, Redux Toolkit
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
 - **Real-time Engine**: Socket.io
