@@ -9,6 +9,7 @@ const ChatListItem = ({person}) => {
   const {name, picture} = person;
 
   const handleClick = () => {
+    alert('hii')
     person && dispatch(setActiveConversation(person))
     // dispatch(addConversation({senderId: user.sub, receiverId: person.sub}))
   }

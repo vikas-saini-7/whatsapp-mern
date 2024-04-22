@@ -32,7 +32,7 @@ const LoginDialog = () => {
                 </div>
             </div>
         </main>
-        {error && <p className='mt-8 text-red-600 text-center'>Error Logging In: {error}</p>}
+        {!loading && error && <p className='mt-8 text-red-600 text-center'>Error Logging In: {error}</p>}
         {loading && <p className='mt-8 text-green-600 text-center'>Loading...</p>}
     </div>
   )

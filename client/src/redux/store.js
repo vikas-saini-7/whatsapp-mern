@@ -4,6 +4,7 @@ import authReducer from './reducers/authSlice';
 import conversationReducer from './reducers/conversationSlice';
 import messageReducer from './reducers/messageSlice';
 import socketReducer from './reducers/socketSlice';
+import drawerReducer from './reducers/drawerSlice';
 
 const store = configureStore({
     reducer: {
@@ -11,6 +12,7 @@ const store = configureStore({
         conversation: conversationReducer,
         message: messageReducer,
         socket: socketReducer,
+        drawer: drawerReducer,
     },
 })
 
