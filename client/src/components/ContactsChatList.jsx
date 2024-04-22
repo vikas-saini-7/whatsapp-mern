@@ -4,121 +4,17 @@ import { useSelector } from 'react-redux'
 
 const ContactsChatList = () => {
   const user = useSelector(state=> state.auth.user)
-  const persons = useSelector(state => state.conversation.users)
+  const users = useSelector(state => state.conversation.searchedConversations)
   return (
-    <div  className="flex flex-col bg-dark-2 overflow-y-auto overflow-x-hidden" id="contact-list">
-        {persons &&
+    <div  className="flex flex-auto flex-col bg-dark-2 overflow-y-auto overflow-x-hidden" id="contact-list">
+        {users &&
         <>
-          {persons.map((item) => (
+          {users?.map((item) => (
             item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
           ))}
         </>
         }
-        {persons &&
-        <>
-          {persons.map((item) => (
-            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
-          ))}
-        </>
-        }
-        {persons &&
-        <>
-          {persons.map((item) => (
-            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
-          ))}
-        </>
-        }
-        {persons &&
-        <>
-          {persons.map((item) => (
-            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
-          ))}
-        </>
-        }
-        {persons &&
-        <>
-          {persons.map((item) => (
-            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
-          ))}
-        </>
-        }
-        {persons &&
-        <>
-          {persons.map((item) => (
-            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
-          ))}
-        </>
-        }
-        {persons &&
-        <>
-          {persons.map((item) => (
-            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
-          ))}
-        </>
-        }
-        {persons &&
-        <>
-          {persons.map((item) => (
-            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
-          ))}
-        </>
-        }
-        {persons &&
-        <>
-          {persons.map((item) => (
-            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
-          ))}
-        </>
-        }
-        {persons &&
-        <>
-          {persons.map((item) => (
-            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
-          ))}
-        </>
-        }
-        {persons &&
-        <>
-          {persons.map((item) => (
-            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
-          ))}
-        </>
-        }
-        {persons &&
-        <>
-          {persons.map((item) => (
-            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
-          ))}
-        </>
-        }
-        {persons &&
-        <>
-          {persons.map((item) => (
-            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
-          ))}
-        </>
-        }
-        {persons &&
-        <>
-          {persons.map((item) => (
-            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
-          ))}
-        </>
-        }
-        {persons &&
-        <>
-          {persons.map((item) => (
-            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
-          ))}
-        </>
-        }
-        {persons &&
-        <>
-          {persons.map((item) => (
-            item.sub !== user.sub ? <ChatListItem key={item?._id} person={item}/> : ''
-          ))}
-        </>
-        }
+        
     </div>
   )
 }

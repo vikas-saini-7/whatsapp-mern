@@ -29,7 +29,7 @@ const ListSection = () => {
       </nav>
 
       {/* input container  */}
-      {/* <SearchConversations/> */}
+      <SearchConversations/>
 
       {/* Persons  */}
       <ContactsChatList/>

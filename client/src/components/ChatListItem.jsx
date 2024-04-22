@@ -14,7 +14,7 @@ const ChatListItem = ({person}) => {
   }
   return (
     <>
-    <div onClick={handleClick} className="flex flex-auto items-center space-x-1 cursor-pointer px-4 p-3 bg-gray-hover hover:bg-gray-hover" id="contact-list-item">
+    <div onClick={handleClick} className="flex items-center space-x-1 cursor-pointer px-4 p-3 bg-gray-hover hover:bg-gray-hover" id="contact-list-item">
         
         <img className="w-12 h-12 rounded-full object-cover" src={picture} alt="" draggable="false"/>
 
@@ -31,7 +31,7 @@ const ChatListItem = ({person}) => {
         </div>
     </div>
 
-    <div className="flex flex-auto ml-16 border-b border-white border-opacity-10"></div>  
+    <div className="flex ml-16 border-b border-white border-opacity-10"></div>  
     </>
   )
 }
