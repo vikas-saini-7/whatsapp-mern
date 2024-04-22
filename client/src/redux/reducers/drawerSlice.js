@@ -9,18 +9,18 @@ const drawerSlice = createSlice({
     name: 'auth',
     initialState:initialState,
     reducers:{
-        openModal: (state, action) => {
+        openDrawer: (state, action) => {
             state.isOpen = true
         },
-        closeModal: (state, action) => {
-            state.isOpen = true
+        closeDrawer: (state, action) => {
+            state.isOpen = false
         },
-        toggleModal: (state, action) => {
-            state.isOpen = true
+        toggleDrawer: (state, action) => {
+            state.isOpen = !state.isOpen
         }
     },
 })
 
-export const {openModal, closeModal, toggleModal} = drawerSlice.actions
+export const {openDrawer, closeDrawer, toggleDrawer} = drawerSlice.actions
 
 export default drawerSlice.reducer;

@@ -20,8 +20,13 @@ function App() {
     <>
     {isAuthenticated ?
       <div className='flex flex-row h-screen'>
+
+        {/* left section  */}
         <ListSection/>
+
+        {/* right section  */}
         { Object.keys(activeConversation).length ? <ChatSection/> : <EmptyChat/>}
+        
       </div>
     :
       <LoginDialog/>

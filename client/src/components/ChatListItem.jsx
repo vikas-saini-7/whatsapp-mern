@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { setActiveConversation } from '../redux/reducers/conversationSlice';
+import { closeDrawer, toggleDrawer } from '../redux/reducers/drawerSlice';
 
 const ChatListItem = ({person}) => {
   const user = useSelector(state => state.auth.user)
@@ -9,7 +10,7 @@ const ChatListItem = ({person}) => {
   const {name, picture} = person;
 
   const handleClick = () => {
-    alert('hii')
+    dispatch(toggleDrawer())
     person && dispatch(setActiveConversation(person))
     // dispatch(addConversation({senderId: user.sub, receiverId: person.sub}))
   }

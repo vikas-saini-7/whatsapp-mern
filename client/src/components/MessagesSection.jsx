@@ -36,7 +36,6 @@ const MessagesSection = ({ flag }) => {
         <div className='top-2 lg:ml-0 z-10 sticky w-full flex items-center justify-center'>
           <span className="py-1.5 px-3 bg-gray-700 text-xs font-bold text-gray-100 rounded-md shadow-md">TODAY</span>
         </div>
-        {/* {loading && <p className='text-center text-white'>Loading..</p>} */}
         {messages && messages.map((message) => (
           message.receiverId === user.sub ?
             <LeftMessage key={message.id} message={message.text} time={message.createdAt} />
