@@ -13,7 +13,7 @@ function App() {
   const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
 
   useEffect(() => {
-    dispatch(connectSocket())
+    dispatch(connectSocket());
   }, [dispatch])
 
   return (

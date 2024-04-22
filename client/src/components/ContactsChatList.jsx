@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ChatListItem from './ChatListItem'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { getUsersFromSocket } from '../redux/actions/socketActions'
+
 
 const ContactsChatList = () => {
+  const dispatch = useDispatch()
   const user = useSelector(state=> state.auth.user)
   const users = useSelector(state => state.conversation.searchedConversations)
+
+  useEffect(() => {
+    dispatch(getUsersFromSocket(user))
+  }, [])
+
   return (
     <div  className="flex flex-auto flex-col bg-dark-2 overflow-y-auto overflow-x-hidden" id="contact-list">
         {users &&

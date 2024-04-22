@@ -15,10 +15,12 @@ const addUser = (userData, socketId) => {
 }
 
 io.on('connection', (socket) => {
-    console.log('user Connected')
+    console.log('user Connected', socket.id);
 
     socket.on('addUsers', userData => {
+        console.log('addUsers called');
         addUser(userData, socket.id)
         io.emit("getUsers", users)
+        console.log("data sent")
     })
 })
