@@ -20,12 +20,11 @@ export const getUsersFromSocket = createAsyncThunk(
 
     return new Promise((resolve, reject) => {
       socket.once('getUsers', (users) => {
-        console.log('Received users:', users);
         resolve(users);
       });
 
       socket.once('error', (error) => {
-        console.error('Socket error:', error);
+        console.error('Socket error: socket/getUsers', error);
         reject(error);
       });
     });

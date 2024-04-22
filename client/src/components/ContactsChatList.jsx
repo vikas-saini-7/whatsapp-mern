@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import ChatListItem from './ChatListItem'
 import { useDispatch, useSelector } from 'react-redux'
 import { getUsersFromSocket } from '../redux/actions/socketActions'
+import socket from '../utils/socket'
 
 
 const ContactsChatList = () => {
@@ -11,7 +12,7 @@ const ContactsChatList = () => {
 
   useEffect(() => {
     dispatch(getUsersFromSocket(user))
-  }, [])
+  }, [user])
 
   return (
     <div  className="flex flex-auto flex-col bg-dark-2 overflow-y-auto overflow-x-hidden" id="contact-list">
