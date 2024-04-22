@@ -1,5 +1,3 @@
-![alt text](https://github.com/vikas-saini-7/whatsapp-mern/blob/master/client/public/images/covers/cover-1.png)
-
 # WhatsApp MERN Clone
 
 This project is a full-stack clone of WhatsApp, built using the MERN stack (MongoDB, Express.js, React.js, Node.js) and socket.io for real-time communication.
@@ -18,6 +16,11 @@ This project is a full-stack clone of WhatsApp, built using the MERN stack (Mong
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
 - **Real-time Engine**: Socket.io
+
+## Screenshots
+
+![Cover image 1](https://github.com/vikas-saini-7/whatsapp-mern/blob/master/client/public/images/covers/cover-1.png)
+![Cover Image 2](https://github.com/vikas-saini-7/whatsapp-mern/blob/master/client/public/images/covers/cover-2.png)
 
 ## Installation
 
